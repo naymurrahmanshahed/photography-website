@@ -143,12 +143,10 @@ header {
   transition: var(--transition);
 }
 .header-btn:hover {
-  background-color: var(--color-bg-3);
+  background-color: var(--color-bg-4);
   color: var(--color-light);
 }
-.header-left h1 {
-  font-size: 3rem;
-}
+
 .header-right {
   margin-top: 10rem;
 }
@@ -192,7 +190,7 @@ header {
 }
 .header-frames {
   position: absolute;
-  top: 90vh;
+  top: 100vh;
   left: 18vw;
 }
 .header-frame {
@@ -216,4 +214,105 @@ header {
 .header-frames:hover .header-frame:nth-child(2) {
   top: 0;
   left: 16rem;
+}
+
+/*=======ABOUT START=======*/
+
+#about {
+  margin-top: 20rem;
+}
+.about-container {
+  display: grid;
+  grid-template-columns: 43% 53%;
+  gap: 4%;
+}
+.about-left {
+  position: relative;
+}
+.about-image-bg {
+  width: 15rem;
+  height: 20rem;
+  background-color: var(--color-bg-4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.about-image-lg {
+  width: 27rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  filter: saturate(1) brightness(0.5);
+  transition: var(--transition);
+}
+.about-image-md {
+  width: 17rem;
+  height: 17rem;
+  position: absolute;
+  top: 7rem;
+  left: 14rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.about-left:hover .about-image-md {
+  opacity: 0;
+}
+.about-left:hover .about-image-lg {
+  filter: saturate(1) brightness(1);
+  border: 1rem solid var(--color-bg-4);
+  bottom: 0;
+  left: 0;
+}
+.about-right h2 {
+  margin-bottom: 3rem;
+}
+.about-right p {
+  margin-bottom: 1.5rem;
+  width: 94%;
+  text-align: justify;
+}
+.about-left:hover .about-image-md {
+  opacity: 0;
+}
+/*=======GALLERY START=======*/
+#gallery {
+  margin-top: 10rem;
+}
+.gallery-head p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 54%;
+}
+.gallery-images {
+  display: grid;
+  grid-template-areas: "a b c" "d e f";
+  gap: 2rem;
+}
+.gallery-image:nth-child(1) {
+  grid-area: a;
+}
+.gallery-image:nth-child(2) {
+  grid-area: b;
+}
+.gallery-image:nth-child(3) {
+  grid-area: c;
+}
+.gallery-image:nth-child(4) {
+  grid-area: d;
+}
+.gallery-image:nth-child(5) {
+  grid-area: e;
+}
+.gallery-image:nth-child(6) {
+  grid-area: f;
+}
+.gallery-image {
+  border: 0.5rem solid var(--color-bg-4);
+}
+.gallery-image img {
+  filter: saturate(0) brightness(0.5);
+  transition: var(--transition);
+}
+.gallery-image:hover img {
+  filter: saturate(1) brightness(1);
 }
