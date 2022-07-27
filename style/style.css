@@ -316,3 +316,64 @@ header {
 .gallery-image:hover img {
   filter: saturate(1) brightness(1);
 }
+
+/*=======COLLAGE START=======*/
+#collage {
+  margin-top: 10rem;
+}
+
+.collage-container {
+  text-align: right;
+}
+.collage-head h2 {
+  margin-bottom: 2rem;
+}
+.collage-head p {
+  padding-left: 53%;
+  margin-bottom: 2rem;
+}
+
+.collage-images {
+  display: grid;
+  grid-template-areas:
+    "a f f"
+    "g f f"
+    "g c b"
+    "g d e";
+  gap: 1rem;
+}
+.collage-image {
+  border: 0.5rem solid var(--color-bg-4);
+  overflow: hidden;
+}
+.collage-image:nth-child(1) {
+  grid-area: a;
+}
+.collage-image:nth-child(2) {
+  grid-area: b;
+}
+.collage-image:nth-child(3) {
+  grid-area: c;
+}
+.collage-image:nth-child(4) {
+  grid-area: d;
+}
+.collage-image:nth-child(5) {
+  grid-area: e;
+}
+.collage-image:nth-child(6) {
+  grid-area: g;
+}
+.collage-image:nth-child(7) {
+  grid-area: f;
+}
+
+.collage-image img {
+  height: 100%;
+  filter: saturate(0) brightness(0.5);
+  transition: var(--transition);
+}
+.collage-image:hover img {
+  filter: saturate(1) brightness(1);
+  transform: scale(1.2);
+}
